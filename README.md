@@ -29,19 +29,36 @@ Tested on 17×17 and 27×27 grids, Q-Learning showed superior path quality and l
 | Random Select | Suboptimal      | Variable            | 132,449 → 11,901    |
 
 ## ⚙️ Installation & Usage
-### Clone the repository
+#### Clone the repository
+
 `git clone https://github.com/Vikhorz/optimal-path-qlearning.git
 cd optimal-path-qlearning`
 
-### Install dependencies
-`pip install -r requirements.txt`
+#### Make sure you have Python 3.x installed with these dependencies:
 
-### Run Q-Learning
-`python src/q_learning.py`
+`pip install numpy pandas openpyxl`
 
-### Run Double Q-Learning
-`python src/double_q_learning.py`
+Note: openpyxl is required for reading Excel .xlsx files.
 
+## How to run
+Make sure your reward-27x27.xlsx file is in the root directory (or adjust the path in the script).
+
+#### Run your main script:
+`python src/dl-ql.py`
+
+Replace main.py with the actual script filename if different.
+
+## What it does
+
+- Loads the reward matrix from Excel (reward-27x27.xlsx)
+
+- Implements Double Q-Learning on a 27×27 grid
+
+- Runs 3.2 million training iterations with epsilon-greedy exploration
+
+- Prints the trained Q-matrix and finds the optimal path to a goal state
+
+- Outputs cumulative rewards and the selected path
 
 ## 📖 Citation
 
