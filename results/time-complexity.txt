@@ -1,0 +1,8 @@
+qlearning 0.00097 seconds 27x27
+qlearning 0.00093 seconds 17x17
+
+dijkstra 0.000034 seconds 27x27
+dijkstra 0.000023 seconds 17x17
+
+random-move 0.00188 seconds 27x27
+random-move 0.00133 seconds 17x17

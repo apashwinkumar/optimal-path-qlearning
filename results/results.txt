@@ -1,0 +1,54 @@
+4 --> Q-Learning = [0, 1, 3]. --> Dijkstra = [0, 7, 12, 3] --> Random-move = [0, 2, 5, 3].
+7 --> Q-Learning = [0, 2, 5, 6]. --> Dijkstra [0, 7, 12, 3, 17, 22, 6]. --> Random-move = [0, 1, 4, 17, 22, 6].
+12 --> Q-Learning = [0, 11]. --> Dijkstra = [0, 11]. --> Random-move = [0, 2, 11].
+13 --> Q-Learning = [0, 7, 12]. --> Dijkstra = [0, 7, 12]. --> Random-move = [0, 2, 3, 12].
+15 --> Q-Learning = [0, 9, 14]. --> Dijkstra = [0, 9, 14]. --> Random-move = [0, 2, 5, 3, 14].
+17 --> Q-Learning = [0, 11, 16]. --> Dijkstra = [0, 11, 16]. --> Random-move = [0, 1, 3, 2, 16].
+18 --> Q-Learning = [0, 1, 4, 17]. --> Dijkstra = [0, 7, 12, 3, 17]. --> Random-move = [0, 2, 11, 16, 3, 4, 17].
+20 --> Q-Learning = [0, 1, 3, 19]. --> Dijkstra = [0, 7, 12, 3, 19]. --> Random-move = [0, 7, 1, 4, 17, 3, 19].
+22 --> Q-Learning = [0, 2, 3, 21]. --> Dijkstra = [0, 7, 12, 3, 21]. --> Random-move = [0, 1, 12, 3, 5, 26, 21].
+23 --> Q-Learning = [0, 1, 3, 17, 22]. --> Dijkstra = [0, 7, 12, 3, 17, 22]. --> Random-move = [0, 2, 5, 6, 4, 22].
+24 --> Q-Learning = [0, 1, 4, 6, 23]. --> Dijkstra = [0, 7, 12, 3, 18, 23]. --> Random-move = [0, 1, 4, 22, 6, 23].
+25 --> Q-Learning = [0, 2, 3, 19, 24]. --> Dijkstra = [0, 7, 12, 3, 19, 24]. --> Random-move = [0, 1, 12, 3, 21, 26, 6, 24].
+27 --> Q-Learning = [0, 11, 2, 5, 26]. --> Dijkstra = [0, 7, 12, 3, 21, 26]. --> Random-move = [0, 1, 4, 3, 5, 26].
+
+
+4 --> Q-Learning = [1, 2, 4]. --> Dijkstra = [1, 8, 13, 4] --> Random-move = [1, 3, 6, 4].
+7 --> Q-Learning = [1, 3, 6, 7]. --> Dijkstra [1, 8, 13, 4, 18, 23, 7]. --> Random-move = [1, 2, 5, 18, 23, 7].
+12 --> Q-Learning = [1, 12]. --> Dijkstra = [1, 12]. --> Random-move = [1, 3, 12].
+13 --> Q-Learning = [1, 8, 13]. --> Dijkstra = [1, 8, 13]. --> Random-move = [1, 3, 4, 13].
+15 --> Q-Learning = [1, 10, 15]. --> Dijkstra = [1, 10, 15]. --> Random-move = [1, 3, 6, 4, 15].
+17 --> Q-Learning = [1, 12, 17]. --> Dijkstra = [1, 12, 17]. --> Random-move = [1, 2, 4, 3, 17].
+18 --> Q-Learning = [1, 2, 5, 18]. --> Dijkstra = [1, 8, 13, 4, 18]. --> Random-move = [1, 3, 12, 17, 4, 5, 18].
+20 --> Q-Learning = [1, 2, 4, 20]. --> Dijkstra = [1, 8, 13, 4, 20]. --> Random-move = [1, 8, 2, 5, 19, 4, 20].
+22 --> Q-Learning = [1, 3, 4, 22]. --> Dijkstra = [1, 8, 13, 4, 22]. --> Random-move = [1, 2, 13, 4, 6, 27, 22].
+23 --> Q-Learning = [1, 2, 4, 18, 23]. --> Dijkstra = [1, 8, 13, 4, 19, 24]. --> Random-move = [1, 2, 5, 23, 4, 24].
+25 --> Q-Learning = [1, 3, 4, 20, 25]. --> Dijkstra = [1, 8, 13, 4, 20, 25]. --> Random-move = [1, 2, 13, 4, 22, 27, 7, 25].
+27 --> Q-Learning = [1, 12, 3, 6, 27]. --> Dijkstra = [1, 8, 13, 4, 22, 27]. --> Random-move = [1, 2, 5, 4, 6, 27].
+
+
+
+For the first result, starting from destination node 4, Q-learning algorithm selected the path [1, 2, 4] with 2 steps, which is the shortest path among the three algorithms. Dijkstra's algorithm selected the path [1, 8, 13, 4] with 3 steps, which is only slightly worse than Q-learning. Random-move algorithm selected [1, 3, 6, 4] with also 3 steps, which is the same length as Dijkstra's path, but with different intermediate nodes. The comparison of these algorithms performance in finding the shortest path for node 4 is presented in Figure 1.
+
+For the second result, starting from destination node 7, Q-learning algorithm selected the path [1, 3, 6, 7] with 3 steps, which is the shortest path among the three algorithms. Dijkstra's algorithm selected the path [1, 8, 13, 4, 18, 23, 7] with 6 steps, which is much longer than Q-learning's path. Random-move algorithm selected [1, 2, 5, 18, 23, 7] with 5 steps, which is also longer than Q-learning's path, but shorter than Dijkstra's. The comparison of these algorithms performance in finding the shortest path for node 7 is presented in Figure 2.
+
+For the third result, starting from destination node 18, Q-learning algorithm selected the path [1, 2, 5, 18] with 3 steps, which was the shortest path among the three algorithms. Dijkstra's algorithm selected the path [1, 8, 13, 4, 18] with 4 steps. Random-move algorithm selected [1, 3, 12, 17, 4, 5, 18] with 6 steps, which was the worst result among the three algorithms. The comparison of these algorithms performance in finding the shortest path for node 18 is presented in Figure 3.
+
+For the fourth result, starting from destination node 25, Q-learning algorithm selected the path [1, 3, 4, 20, 25] with 4 steps, which was the shortest path among the three algorithms. Dijkstra's algorithm selected the path [1, 8, 13, 4, 20, 25] with 5 steps, while Random-move algorithm selected [1, 2, 13, 4, 22, 27, 7, 25] with 7 steps, which was the worst result among the three algorithms. The comparison of these algorithms performance in finding the shortest path for node 25 is presented in Figure 4.
+
+For the fifth result, starting from destination node 20," Q-learning algorithm selected the path [1, 2, 4, 20] with 3 steps, which is the shortest path among the three algorithms. Dijkstra's algorithm selected the path [1, 8, 13, 4, 20] with 4 steps, while Random-move algorithm selected [1, 8, 2, 5, 19, 4, 20] with 6 steps. The comparison of these algorithms' performance in finding the shortest path for node 20 is presented in Figure 5. 
+
+For the sixth result, starting from destination node 22, Q-learning algorithm selected the path [1, 3, 4, 22] with 3 steps, which is again the shortest path. Dijkstra's algorithm selected the path [1, 8, 13, 4, 22] with 4 steps, while Random-move algorithm selected [1, 2, 13, 4, 6, 27, 22] with 6 steps.
+
+For the seventh result, starting from destination node 17, both Q-learning and Dijkstra's algorithms selected the same path [1, 12, 17] with 2 steps, which is the shortest path. Random-move algorithm selected [1, 2, 4, 3, 17] with 4 steps.
+
+For the eighth result, starting from destination node 15, both Q-learning and Dijkstra's algorithms selected the same path [1, 10, 15] with 2 steps, which is again the shortest path. Random-move algorithm selected [1, 3, 6, 4, 15] with 4 steps.
+
+For the ninth result, starting from destination node 27, Q-learning algorithm selected the path [1, 12, 3, 6, 27] with 4 steps, which is the shortest path. Dijkstra's algorithm selected the path [1, 8, 13, 4, 22, 27] with 5 steps, while Random-move algorithm selected [1, 2, 5, 4, 6, 27] with also 5 steps.
+
+For the tenth result, starting from destination node 23, Q-learning algorithm selected the path [1, 2, 4, 18, 23] with 4 steps, which is the shortest path. Dijkstra's algorithm selected the path [1, 8, 13, 4, 19, 24] with 5 steps, while Random-move algorithm selected [1, 2, 5, 23, 4, 24] with also 5 steps.
+
+
+Overall, the results demonstrate that Q-learning algorithm outperformed the other two algorithms in terms of the number of steps taken to find the shortest path in four out of five cases, indicating its effectiveness in solving the shortest path problem in a given graph. However, it should be noted that the performance of Q-learning algorithm may be affected by the size and complexity of the graph, and further studies are needed to investigate its scalability and robustness.
+
+
