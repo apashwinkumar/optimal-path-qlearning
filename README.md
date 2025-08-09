@@ -1,6 +1,7 @@
 # Optimal Pathfinding with Q-Learning & Double Q-Learning
 **A reinforcement learning approach for shortest pathfinding in dynamic environments, using Q-Learning, Double Q-Learning, Reward Shaping, and exploration-exploitation strategies.**
 
+Publication URL:  [Reinforcement Learning Model for Finding Optimal Path](https://www.researchgate.net/publication/376844220_Reinforcement_Learning_Model_for_Finding_Optimal_Path)
 ## 📜 Description
 
 This project implements and compares Q-Learning, Double Q-Learning, Dijkstra's Algorithm, and Random Selection to find optimal paths in large grid environments.
